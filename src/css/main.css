@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.landing {
+  width: 100%;
+  height: 68.75rem;
+  display: flex;
+}
+
+.landing__first {
+  width: 60%;
+  background-color: #ffe6c9;
+}
+
+.landing__first-container {
+  height: 80%;
+}
+
+.landing__image {
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  height: 100%;
+  width: 100%;
+}
+
+.landing__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.landing__footer--big {
+  font-size: 40px;
+  font-weight: 800;
+  color: #731148;
+}
+
+.landing__footer--small {
+  font-size: 25px;
+  font-weight: 600;
+  color: #731148;
+}
+
+.landing__second {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #fff;
+  position: relative;
+}
+
+.login__block {
+  width: 4.5rem;
+  height: 4.5rem;
+  position: absolute;
+  top: 15%;
+  left: 0;
+}
+
+.login__header-container {
+  height: 9.4375rem;
+  margin-top: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.login__header {
+  font-size: 36px;
+  font-weight: bold;
+  color: #525252;
+}
+
+.login__header--text {
+  margin-top: .1875rem;
+  font-size: 16px;
+  font-weight: normal;
+  color: #525252;
+}
+
+.login__google {
+  height: 2.9375rem;
+  width: 100%;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__google--text {
+  padding-left: .375rem;
+  font-size: 14px;
+  font-weight: bold;
+  color: #828282;
+}
+
+.login__email {
+  text-align: center;
+  margin-top: 1.875rem;
+  font-size: 12px;
+  font-weight: 600;
+  color: #dddddd;
+}
+
+.login__footer {
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  color: #828282;
+  margin-top: 30%;
+}
+
+.login__footer--link {
+  text-decoration: none;
+  font-weight: 600;
+  color: #731148;
+}
+
+.email {
+  height: 16.625rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  justify-content: space-between;
+}
+
+.email__text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #828282;
+}
+
+.email__container {
+  height: 2.8125rem;
+  width: 100%;
+  padding-left: .625rem;
+  border: 1px solid #d2ded9;
+  border-radius: .3125rem;
+}
+
+.email__container::placeholder {
+  font-size: 14px;
+  font-weight: normal;
+  color: #e0e0e0;
+}
+
+.email__tick {
+  margin-top: .3125rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.email__tick input {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.email__tick label {
+  display: flex;
+}
+
+.email__tick label::before {
+  content: '';
+  width: .75rem;
+  height: .75rem;
+  border-radius: .125rem;
+  margin-right: .5em;
+  border: 1px solid #7f265b;
+}
+
+.email__tick input:checked + label::before {
+  content: '\002714';
+  background-color: #7f265b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.email__tick--text {
+  font-size: 12px;
+  font-weight: normal;
+  color: #a1a1a1;
+}
+
+.email__forgot {
+  font-size: 12px;
+  font-weight: 600;
+  color: #7f265b;
+}
+
+.email__login {
+  height: 2.875rem;
+  margin-top: 1.25rem;
+  background-color: #7f265b;
+  border-radius: 6px;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.email__login:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=main.css.map */

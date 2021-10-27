@@ -1,0 +1,83 @@
+.email {
+    // height: 50%;
+    height: 16.625rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    justify-content: space-between;
+    &__text {
+        font-size: 14px;
+        font-weight: 600;
+        color: $header-small;
+    }
+    &__container {
+        height: 2.8125rem;
+        width: 100%;
+        padding-left: .625rem;
+        border:  1px solid #d2ded9;
+        border-radius: .3125rem;
+        &::placeholder { 
+            font-size: 14px;
+            font-weight: normal;
+            color: $input;
+        }
+    }
+    &__tick {
+        margin-top: .3125rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & input {
+            cursor: pointer;
+            opacity: 0;
+            position: absolute;
+        }
+        & label {
+            display: flex
+        }
+        & label::before {
+            content: '';
+            width: .75rem;
+            height: .75rem;
+            border-radius: .125rem;
+            margin-right: .5em;
+            border: 1px solid $button-primary;
+            
+        }
+        & input:checked + label::before {
+            content: '\002714';
+            background-color: $button-primary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        &--text {
+            font-size: 12px;
+            font-weight: normal;
+            color: $input-small;
+           
+        }
+        
+    }
+    &__forgot {
+        font-size: 12px;
+        font-weight: 600;
+        color: $button-primary;
+
+    }
+    &__login {
+        height: 2.875rem;
+        margin-top: 1.25rem;
+        background-color: $button-primary;
+        border-radius: 6px;
+        border: none;
+        font-size: 18px;
+        color: #fff;
+        font-weight: 600;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
