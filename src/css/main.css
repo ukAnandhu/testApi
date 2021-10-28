@@ -245,4 +245,11 @@ body {
   color: green;
   font-weight: 600;
 }
+
+.email__error {
+  text-align: center;
+  font-size: 15px;
+  color: red;
+  font-weight: 600;
+}
 /*# sourceMappingURL=main.css.map */

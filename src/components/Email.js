@@ -7,12 +7,15 @@ import validator from 'validator'
 function Email() {
     const [email, setEmail] = useState("");
     const [passwd, setPasswd] = useState("");
-    const [emailError, setEmailError] = useState("")
-    const [login, setLogin] = useState('')
+    const [emailError, setEmailError] = useState("");
+    const [login, setLogin] = useState('');
+    const [error, setError] = useState('');
+    
 
     const inputHandler = (e) => {
-        setLogin('');
-        setEmailError('')
+        setLogin("");
+        setEmailError("");
+        setError("");
         setEmail(e.target.value);
 
     }
@@ -54,8 +57,11 @@ function Email() {
                  const data = res.data;
                  console.log(data, 'wallboyz')
                }) 
-            .catch(error => console.log(error))  
-           
+            .catch(error => {
+                setError("login failed !")
+                console.log(error.response);
+            })  
+             
              setEmail("");
              setPasswd("");    
             
@@ -86,7 +92,8 @@ function Email() {
                 </div>
                 <button className="email__login" onClick={clickHandler}>Login</button>
                  <p className="email__success">{login}</p> 
-
+                 <p className="email__error">{error}</p> 
+                 
        </form>
     )
 }
