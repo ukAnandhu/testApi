@@ -1,6 +1,6 @@
 .email {
     // height: 50%;
-    height: 16.625rem;
+    height: 18.75rem;
     display: flex;
     flex-direction: column;
     margin-top: 2.5rem;
@@ -65,7 +65,9 @@
         font-size: 12px;
         font-weight: 600;
         color: $button-primary;
-
+        &:hover {
+            cursor: pointer;
+        }
     }
     &__login {
         height: 2.875rem;
@@ -83,6 +85,12 @@
     &__indicator {
         font-size: 14px;
         color: red;
+        font-weight: 600;
+    }
+    &__success {
+        text-align: center;
+        font-size: 15px;
+        color: green;
         font-weight: 600;
     }
     

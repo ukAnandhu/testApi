@@ -8,24 +8,26 @@ function Email() {
     const [email, setEmail] = useState("");
     const [passwd, setPasswd] = useState("");
     const [emailError, setEmailError] = useState("")
+    const [login, setLogin] = useState('')
 
     const inputHandler = (e) => {
+        setLogin('');
+        setEmailError('')
         setEmail(e.target.value);
 
     }
     const inputPasswdhandler = (e) => {
-        setPasswd(e.target.value)
+        setPasswd(e.target.value);
     }
     const clickHandler = (e) => {
+        e.preventDefault();  
+        if (email === '' && passwd === '') return
         if (validator.isEmail(email)) {
             setEmailError('');
          }else {
              setEmailError('enter a valid email !');
          }
-        const value = e.target.value
-        console.log({value});
-        e.preventDefault();
-        if (email === '' && passwd === '') return
+       
         const config = {
             headers: {
             'Accept': 'application/json',
@@ -40,13 +42,23 @@ function Email() {
                 },
                 config
                 )
-            .then(res => {
+            .then((res) => {
+                 const status = res.status;
+                 console.log(status, 'kkkkk');
+                 if (res.status === 200) {
+                    setLogin("login success");
+                }else {
+                    setLogin("enter correct password");
+                }
+                
                  const data = res.data;
                  console.log(data, 'wallboyz')
                }) 
             .catch(error => console.log(error))  
+           
              setEmail("");
              setPasswd("");    
+            
     }
 
     return (
@@ -73,6 +85,8 @@ function Email() {
                     <p className="email__forgot">Forgot Password?</p>
                 </div>
                 <button className="email__login" onClick={clickHandler}>Login</button>
+                 <p className="email__success">{login}</p> 
+
        </form>
     )
 }

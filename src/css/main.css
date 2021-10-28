@@ -130,7 +130,7 @@ body {
   font-size: 18px;
   font-weight: normal;
   color: #828282;
-  margin-top: 30%;
+  margin-top: 25%;
 }
 
 .login__footer--link {
@@ -140,7 +140,7 @@ body {
 }
 
 .email {
-  height: 16.625rem;
+  height: 18.75rem;
   display: flex;
   flex-direction: column;
   margin-top: 2.5rem;
@@ -214,6 +214,10 @@ body {
   color: #7f265b;
 }
 
+.email__forgot:hover {
+  cursor: pointer;
+}
+
 .email__login {
   height: 2.875rem;
   margin-top: 1.25rem;
@@ -232,6 +236,13 @@ body {
 .email__indicator {
   font-size: 14px;
   color: red;
+  font-weight: 600;
+}
+
+.email__success {
+  text-align: center;
+  font-size: 15px;
+  color: green;
   font-weight: 600;
 }
 /*# sourceMappingURL=main.css.map */
