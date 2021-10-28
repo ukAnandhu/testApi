@@ -228,4 +228,10 @@ body {
 .email__login:hover {
   cursor: pointer;
 }
+
+.email__indicator {
+  font-size: 14px;
+  color: red;
+  font-weight: 600;
+}
 /*# sourceMappingURL=main.css.map */
